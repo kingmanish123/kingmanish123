@@ -25,6 +25,11 @@ An end-to-end pipeline that takes a story idea to an upload-ready YouTube video:
 
 `Python` · `FastAPI` · `Multi-agent` · `TTS / image generation`
 
+### 🤖 [jarvis](https://github.com/kingmanish123/jarvis) — autonomous macOS assistant
+A local, single-owner agent that actually operates the machine: opens apps, reads and writes files, drives the UI, runs shell commands, and watches system health. A multi-agent orchestrator on a local Ollama model does the planning, and every action passes a safety gate that classifies it by reversibility before it runs.
+
+`Python` · `FastAPI` · `Ollama` · `Tool calling`
+
 ### 📈 [stock_prediction](https://github.com/kingmanish123/stock_prediction) — applied-LLM reasoning pipeline
 Reads the overnight Indian-market news firehose, extracts themes with Gemini, reasons over candidates with Claude, and emits a ranked Nifty-100 watchlist with the full chain of reasoning attached to every pick. An educational research project — not financial advice.
 
