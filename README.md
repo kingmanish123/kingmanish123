@@ -10,6 +10,11 @@ I work across FastAPI backends, multi-agent LLM systems, and Next.js frontends. 
 
 ## Selected projects
 
+### 🐛 [silentbug](https://github.com/kingmanish123/silentbug) — the bugs linters can't see
+Finds code that is valid Python, passes review, and then fails quietly in production. An `except` that returns success so nothing ever retries. A permission check that passes when its cache is down. A deterministic AST pass flags candidates, then one isolated LLM call per candidate decides whether it is a real defect or intentional. Six detectors, each taken from a bug I actually hit. Scored against a labelled corpus: **precision 0.78, recall 1.00** — published, because most tools in this space publish neither.
+
+`Python` · `AST` · `Anthropic` · `pytest` · `GitHub Actions`
+
 ### 🔍 [documind](https://github.com/kingmanish123/documind) — production-minded RAG engine
 Hybrid retrieval (BM25 + dense + reciprocal rank fusion), grounded citations, LLM guardrails, and an evaluation harness measuring hit@k and faithfulness. Provider-agnostic, and runs fully offline with zero configuration.
 
@@ -19,6 +24,11 @@ Hybrid retrieval (BM25 + dense + reciprocal rank fusion), grounded citations, LL
 Turns raw client conversations and a BRD into a complete engineering planning suite — user flows, tech docs, timelines, sprint plans, risk assessments. 12+ specialized agents routed across three LLM providers, with human approval gates between stages and live cost telemetry.
 
 `Python` · `FastAPI` · `Next.js` · `Multi-agent orchestration`
+
+### 🛠️ [localsmith](https://github.com/kingmanish123/localsmith) — local-first agentic coding assistant
+A VS Code extension: streaming chat, an autonomous multi-file agent, inline edits and tab completion, all running on your own Ollama models. Nothing leaves the machine by default. The interesting part is the safety model — `write_file` refuses to blank or drastically shrink a file, every write is reviewed before it touches disk, the agent loop is bounded by a hard step cap, and MCP servers and workspace hooks each require explicit approval before anything is spawned.
+
+`TypeScript` · `VS Code API` · `Ollama` · `Tool calling` · `MCP`
 
 ### 🎬 [ai-story-video-factory](https://github.com/kingmanish123/ai-story-video-factory) — story to finished video
 An end-to-end pipeline that takes a story idea to an upload-ready YouTube video: trending-topic research, scriptwriting, character sheets for visual consistency, image generation, voice synthesis, thumbnails, assembly, and upload. Around 15 specialized agents behind a single orchestrator.
